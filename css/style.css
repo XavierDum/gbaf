@@ -1,0 +1,78 @@
+
+body
+{
+	background-color: #f0f8ff;
+}
+
+p
+{
+	text-align: justify;
+	padding: 0 10px 0 10px;
+}
+
+header
+{
+	display: flex;
+	justify-content: space-between;
+	background-color: #dcdcdc;
+	border-bottom: 2px solid silver;
+	padding: 10px 10px 10px 10px;
+}
+
+section
+{
+	text-align: center;
+}
+
+
+#bloc_page
+{
+	margin: auto;
+	width: 800px;
+	background-color: white;
+}
+
+/*index*/
+#presentation_gbaf
+{
+	text-align: center;
+}
+
+
+
+#partenaires
+{
+	height: 400px;
+	text-align: center;
+	border: 2px solid grey;
+}
+
+/*inscription*/
+#formulaire
+{
+	text-align: center;	
+}
+
+
+/*login*/
+#banniere
+{
+	background-color: #dcdcdc;
+	border-bottom: 2px solid silver;
+	padding: 10px 10px 10px 10px;
+	text-align: center;
+}
+
+
+footer
+{
+	margin: auto;
+	width: 800px;
+	height: 80px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	background-color: #dcdcdc;
+	border-top: 2px solid silver;
+	padding: 10px 10px 10px 10px;
+}
