@@ -22,33 +22,115 @@ header
 section
 {
 	text-align: center;
-}
-
-
-#bloc_page
-{
 	margin: auto;
 	width: 800px;
-	background-color: white;
 }
+
+
 
 /*index*/
-#presentation_gbaf
+.presentation_gbaf
 {
 	text-align: center;
 }
 
 
-
-#partenaires
+.contenu
 {
+	background-color: rgba(255, 255, 255, 0.925);
+	border: 2px solid silver;
+	border-radius: 10px;
+	height: 200px;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 5px 10px 5px;
+	margin: 10px 0 10px 0;
+}
+
+.logo
+{
+	width: 250px;
+
+}
+
+.texte
+{
+	text-align: justify;
+	width: 350px;
+	overflow: hidden;
+}
+
+.boutons
+{
+	width: 100px;
+	border: 2px solid black;
+}
+
+
+/*page partenaire*/
+.partenaire_contenu
+{
+	background-color: rgba(255, 255, 255, 0.925);
+	border: 2px solid silver;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	padding: 10px 5px 10px 5px;
+	margin: 10px 0 10px 0;	
+}
+
+.partenaire_logo
+{
+	width: 800px;
+	padding: 10px 10px 10px 10px;
+}
+
+.partenaire_texte
+{
+	text-align: justify;
+	width: 800px;
+	padding: 10px 10px 10px 10px;
+}
+
+.partenaire_boutons
+{
+	width: 800px;
+	padding: 10px 10px 10px 10px;
+}
+
+.formulaire_vote
+{
+	width: 800px;
+	height: 100px;
+	background-color: rgba(255, 255, 255, 0.925);
+	border: 2px solid silver;
+	border-radius: 10px;
+	margin: 10px 0 10px 0;	
+}
+
+.formulaire_commentaire
+{
+	width: 800px;
+	height: 100px;
+	background-color: rgba(255, 255, 255, 0.925);
+	border: 2px solid silver;
+	border-radius: 10px;
+	margin: 10px 0 10px 0;	
+}
+
+.affichage_commentaire
+{
+	width: 800px;
 	height: 400px;
-	text-align: center;
-	border: 2px solid grey;
+	background-color: rgba(255, 255, 255, 0.925);
+	border: 2px solid silver;
+	border-radius: 10px;
+	margin: 10px 0 10px 0;	
 }
 
 /*inscription*/
-#formulaire
+
+p.formulaire
 {
 	text-align: center;	
 }
