@@ -8,38 +8,52 @@
 
 	<body>
 		<div id="bloc_page">
-
-		<?php
-			include 'en_tete_bis.php';
-		?>
-
+			<?php
+				include 'en_tete_bis.php';
+			?>
 			<section>
 				<h1>Inscription</h1>
 
-				<form method="post" action="traitement.php">
+				<form method="post" action="inscription_traitement.php">
 
-					<p id='formulaire'><label> Nom </label></p>
-					<input type="text" name="nom"/>
-
-					<p id='formulaire'><label> Prenom </label></p>
-					<input type="text" name="prenom"/>
-					
-					<p id='formulaire'><label> Nom d'utilisateur </label></p>
-					<input type="text" name="pseudonyme"/>
-					
-					<p id='formulaire'><label> Mot de passe </label></p>
-					<input type="password" name="mot_de_passe"/>
-					
-					<p id='formulaire'><label> Confirmation du mot de passe </label></p>
-					<input type="password" name="mot_de_passe_check"/>
-								
-					<p id='formulaire'><label> Question secrète </label></p>
-					<input type="text" name="question_secrete"/>
-								
-					<p id='formulaire'><label> Réponse à la question </label></p>
-					<input type="text" name="reponse_question"/>
-					
-					<p id='formulaire'><input type="submit" value="Valider"/></p>
+					<p class="formulaire">
+						<label for="nom"> Nom </label>
+						<br />
+						<input type="text" id="nom" name="nom" />
+					</p>					
+					<p class="formulaire">
+						<label for="prenom"> Prénom </label>
+						<br />
+						<input type="text" id="prenom" name="prenom" />
+					</p>	
+					<p class="formulaire">
+						<label for="username"> Nom d'utilisateur </label>
+						<br />
+						<input type="text" id="username" name="username" />
+					</p>	
+					<p class="formulaire">
+						<label for="password"> Mot de passe </label>
+						<br />
+						<input type="text" id="password" name="password" />
+					</p>	
+					<p class="formulaire">
+						<label for="password_check"> Confirmation du mot de passe </label>
+						<br />
+						<input type="text" id="password_check" name="password_check" />
+					</p>	
+					<p class="formulaire">
+						<label for="question"> Question secrète </label>
+						<br />
+						<input type="text" id="question" name="question" />
+					</p>						
+					<p class="formulaire">
+						<label for="reponse"> Réponse à la question </label>
+						<br />
+						<input type="text" id="reponse" name="reponse" />
+					</p>	
+					<p class="formulaire">
+						<input type="submit" value="Valider" />
+					</p>
 				</form>
 
 			</section>
