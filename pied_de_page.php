@@ -6,12 +6,8 @@
 		<title>GBAF</title>
 	</head>
 
-	<body>
-
-        <footer>
+	<footer>
          Mentions légales - Contact
-        </footer>
-
-	</body>
+    </footer>
 
 </html>
