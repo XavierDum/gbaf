@@ -11,7 +11,9 @@
 	<header>
 			<img src="images/logo.png">
 			<div id="identifiant">
-				Nom et Prénom
+			<?php
+				echo 'Bonjour ' . $_SESSION['user']['username'] . ' , vous êtes le ' . $_SESSION['user']['id_user'] . ' ème';
+			?>
 			</div>
 	</header>
 
