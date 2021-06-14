@@ -9,10 +9,10 @@
 	<body>
 
 	<header>
-			<img src="images/logo.png">
+	<a href="connexion.php"><img src="images/logo.png"></a>
 			<div id="identifiant">
 			<?php
-				echo 'Bonjour ' . $_SESSION['user']['username'] . ' , vous êtes le ' . $_SESSION['user']['id_user'] . ' ème';
+				echo $_SESSION['user']['prenom'] . '  ' . $_SESSION['user']['nom'];
 			?>
 			</div>
 	</header>
