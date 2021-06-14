@@ -6,7 +6,7 @@
 		<title>confirmation</title>
 	</head>
 	<section>
-		<h1>Utilisateur ajouté !</h1>
-		<a href="connexion.php"> se connecter </a>
+		<h1>Mauvais identifiant ou mot de passe !</h1>
+		<a href="connexion.php"> revenir à la page de connexion </a>
 	</section>
 </html>
