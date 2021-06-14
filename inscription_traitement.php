@@ -9,25 +9,16 @@
 	<body>
 
 		<?php
-		$bdd = new PDO('mysql:host=localhost;dbname=gbaf;charset=utf8', 'root', 'root');
-		
+		include 'connexion_bdd.php';
 
-		try
-		{
-			$bdd = new PDO('mysql:host=localhost;dbname=gbaf;charset=utf8', 'root', 'root');
-		}
-		catch (Exception $e)
-		{
-				die('Erreur : ' . $e->getMessage());
-		}
-
+		$pass_hache = password_hash($_POST['password'], PASSWORD_DEFAULT);
 		
 		$req = $bdd->prepare('INSERT INTO utilisateur(nom, prenom, username, password, question, reponse) VALUES(?, ?, ?, ?, ?, ?)');
 		$req->execute(array(
 			$_POST['nom'],
 			$_POST['prenom'],
 			$_POST['username'],
-			$_POST['password'],
+			$pass_hache,
 			$_POST['question'],
 			$_POST['reponse']
 		));
