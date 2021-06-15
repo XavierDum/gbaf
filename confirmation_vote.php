@@ -1,0 +1,1 @@
+<h1>Vous avez déjà voté pour ce partenaire</h1>

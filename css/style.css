@@ -1,6 +1,8 @@
 
 body
 {
+	margin: auto;
+	width: 800px;
 	background-color: #f0f8ff;
 }
 
@@ -12,9 +14,9 @@ p
 
 header
 {
-	display: flex;
-	justify-content: space-between;
+	text-align: center;
 	background-color: #dcdcdc;
+	margin: auto;
 	border-bottom: 2px solid silver;
 	padding: 10px 10px 10px 10px;
 }
@@ -26,6 +28,11 @@ section
 	width: 800px;
 }
 
+.banniere
+{
+	display: flex;
+	justify-content: space-between;
+}
 
 
 /*index*/
@@ -88,19 +95,16 @@ section
 .partenaire_texte
 {
 	text-align: justify;
-	width: 800px;
 	padding: 10px 10px 10px 10px;
 }
 
 .partenaire_boutons
 {
-	width: 800px;
 	padding: 10px 10px 10px 10px;
 }
 
 .formulaire_vote
 {
-	width: 800px;
 	height: 100px;
 	background-color: rgba(255, 255, 255, 0.925);
 	border: 2px solid silver;
@@ -120,12 +124,13 @@ section
 
 .affichage_commentaire
 {
-	width: 800px;
 	height: 400px;
 	background-color: rgba(255, 255, 255, 0.925);
 	border: 2px solid silver;
 	border-radius: 10px;
-	margin: 10px 0 10px 0;	
+	margin: 10px 0 10px 0;
+	padding: 10px 10px 10px 10px;
+	text-align: left;	
 }
 
 /*inscription*/

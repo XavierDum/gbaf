@@ -1,20 +1,8 @@
-<?php
-session_start();
-?>
+<?php session_start(); ?>
+<?php $title = "Index"; ?>
+<?php include 'header.php'; ?>
 
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<link rel="stylesheet" href="css/style.css" />
-		<title>Index</title>
-	</head>
-
-	<body>
 		<section>
-			<?php
-				include 'en_tete.php';
-			?>
 			<div class="presentation_gbaf">
 			<h1>Bienvenue sur GBAF</h1>
 
@@ -36,7 +24,10 @@ session_start();
 					Son président est élu pour 3 ans par ses pairs, chefs d’entreprises et présidents des CDE.
 				</div>
 				<div class="boutons">
-					<a href="partenaire.php"> Plus de détails </a>
+					<?php
+						include 'compteur_formationco.php';
+					?>
+						<a href="partenaire_formationco.php"> Plus de détails </a>
 				</div>
 			</div>
 			<div class="contenu">
@@ -91,13 +82,6 @@ session_start();
 					interaction
 				</div>
 			</div>		
-			
-			<?php
-				include 'pied_de_page.php';
-			?>
-		</section>
-	</body>
+		</section>	
 
-
-
-</html>
+<?php include 'footer.php';  ?>

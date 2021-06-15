@@ -2,8 +2,8 @@
 <?php include 'header.php'; ?>
 
 	<section>
-		<h1>Mauvais identifiant ou mot de passe !</h1>
-		<a href="connexion.php"> revenir à la page de connexion </a>
+		<h1>Utilisateur ajouté !</h1>
+		<a href="connexion.php"> se connecter </a>
 	</section>
 	
 <?php include 'footer.php';  ?>

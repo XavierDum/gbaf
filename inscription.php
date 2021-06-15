@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<link rel="stylesheet" href="css/style.css" />
-		<title>Inscription</title>
-	</head>
+<?php $title = "Inscription"; ?>
+<?php include 'header.php'; ?>
 
-	<body>
 		<section>
-			<?php
-			include 'en_tete_bis.php';
-			?>
-			
 			<h1>Inscription</h1>
-
 			<form method="post" action="inscription_traitement.php">
-
 				<p class="formulaire">
 					<label for="nom"> Nom </label>
 					<br />
@@ -55,11 +43,6 @@
 					<input type="submit" value="Valider" />
 				</p>
 			</form>
-
-			<?php
-			include 'pied_de_page.php';
-			?>
 		</section>
-	</body>
 
-</html>
+<?php include 'footer.php'; ?>		
