@@ -8,7 +8,14 @@
 	<section>
 		<div class="partenaire_contenu">
 			<div class="partenaire_logo">
-				<img src="images/formation_co.png">
+				<?
+					$img = $bdd->prepare(" SELECT logo FROM acteur WHERE id_acteur= ? ");
+					$img->execute(array
+						($acteur
+					));
+					$logo = $img->fetch();
+				?>
+				<?php echo '<img src= "' .  $logo['logo'] . '">' ; ?>
 			</div>
 			<div class="partenaire_texte">
 				Formation&co est une association française présente sur tout le territoire.
@@ -27,9 +34,10 @@
 		</div>
 		<div class="formulaire_vote">
 		<?php
-			$req_vote = $bdd->prepare('SELECT id_user FROM vote WHERE id_user= ?');
+			$req_vote = $bdd->prepare('SELECT id_user FROM vote WHERE id_user= ? AND id_acteur= ?');
 			$req_vote->execute(array
-				($_SESSION['user']['id_user']
+				($_SESSION['user']['id_user'],
+				$acteur
 			));
 			$resultat_vote = $req_vote->fetch();
 
@@ -42,9 +50,10 @@
 		</div>
 		<div class="formulaire_com">
 		<?php
-			$req_com = $bdd->prepare('SELECT id_user FROM post WHERE id_user= ?');
+			$req_com = $bdd->prepare('SELECT id_user FROM post WHERE id_user= ? AND id_acteur= ?');
 			$req_com->execute(array
-				($_SESSION['user']['id_user']
+				($_SESSION['user']['id_user'],
+				$acteur
 			));
 			$resultat_com = $req_com->fetch();
 

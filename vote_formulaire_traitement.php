@@ -15,11 +15,11 @@
         header('Location: partenaire_formationco.php');
     }
 
-    if ($acteur == 3) {
+    if ($acteur == 2) {
         header('Location: partenaire_protectpeople.php');
     }
 
-    if ($acteur == 2) {
+    if ($acteur == 3) {
         header('Location: partenaire_dsa.php');
     }
 

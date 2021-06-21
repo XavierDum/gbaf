@@ -12,5 +12,5 @@
 		htmlspecialchars($_POST['reponse'])
 	));
 
-	header('location: user.php');
+	header('location: confirmation_modification.php');
 ?>

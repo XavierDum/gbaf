@@ -2,6 +2,7 @@
 <?php include 'verification_session.php'; ?>
 <?php $title = "Index"; ?>
 <?php include 'header.php'; ?>
+<?php include 'connexion_bdd.php'; ?>
 
 		<section>
 			<div class="presentation_gbaf">
@@ -18,7 +19,15 @@
 			
 			<div class="contenu">
 				<div class="logo">
-					<img src="images/formation_co.png">
+					<?php $acteur = 1; ?>
+					<?php
+						$img = $bdd->prepare(" SELECT logo FROM acteur WHERE id_acteur= ? ");
+						$img->execute(array
+							($acteur
+						));
+						$logo = $img->fetch();
+					?>
+					<?php echo '<img src= "' .  $logo['logo'] . '">' ; ?>
 				</div>
 				<div class="texte">
 					Formation&co est une association française présente sur tout le territoire.
@@ -32,14 +41,21 @@
 					Vous n’avez pas de diplômes ? Ce n’est pas un problème pour nous ! Nos financements s’adressent à tous.
 				</div>
 				<div class="boutons">
-					<?php $acteur = 1; ?>
 					<?php include 'compteur.php'; ?>
-						<a href="partenaire_formationco.php"> Plus de détails </a>
+					<a href="partenaire_formationco.php"> Plus de détails </a>
 				</div>
 			</div>
 			<div class="contenu">
 				<div class="logo">
-					<img src="images/Dsa_france.png">
+					<?php
+						$acteur = 2;
+						$img = $bdd->prepare(" SELECT logo FROM acteur WHERE id_acteur= ? ");
+						$img->execute(array
+							($acteur
+						));
+						$logo = $img->fetch();
+					?>
+					<?php echo '<img src= "' .  $logo['logo'] . '">' ; ?>
 				</div>
 				<div class="texte">
 					Dsa France accélère la croissance du territoire et s’engage avec les collectivités territoriales.
@@ -48,14 +64,21 @@
 					Nous les accompagnons pour voir plus grand et plus loin et proposons des solutions de financement adaptées à chaque étape de la vie des entreprises
 				</div>
 				<div class="boutons">
-					<?php $acteur = 2; ?>
 					<?php include 'compteur.php'; ?>
-					<a href="partenaire_dsa.php"> Plus de détails </a>
+					<a href="partenaire_protectpeople.php"> Plus de détails </a>
 				</div>		
 			</div>		
 			<div class="contenu">
 				<div class="logo">
-					<img src="images/protectpeople.png">
+					<?php
+						$acteur = 3;
+						$img = $bdd->prepare(" SELECT logo FROM acteur WHERE id_acteur= ? ");
+						$img->execute(array
+							($acteur
+						));
+						$logo = $img->fetch();
+					?>
+					<?php echo '<img src= "' .  $logo['logo'] . '">' ; ?>
 				</div>
 				<div class="texte">
 					Protectpeople finance la solidarité nationale.
@@ -70,13 +93,20 @@
 					économique : nous apportons une contribution aux activités économiques.
 				</div>
 				<div class="boutons">
-					<?php $acteur = 3; ?>
 					<?php include 'compteur.php'; ?>
-					<a href="partenaire_protectpeople.php"> Plus de détails </a>
+					<a href="partenaire_dsa.php"> Plus de détails </a>
 				</div>
 			</div><div class="contenu">
 				<div class="logo">
-					<img src="images/formation_co.png">
+				<?php
+						$acteur = 4;
+						$img = $bdd->prepare(" SELECT logo FROM acteur WHERE id_acteur= ? ");
+						$img->execute(array
+							($acteur
+						));
+						$logo = $img->fetch();
+					?>
+					<?php echo '<img src= "' .  $logo['logo'] . '">' ; ?>
 				</div>
 				<div class="texte">
 					Formation&co est une association française présente sur tout le territoire.
@@ -90,7 +120,6 @@
 					Vous n’avez pas de diplômes ? Ce n’est pas un problème pour nous ! Nos financements s’adressent à tous.
 				</div>
 				<div class="boutons">
-					<?php $acteur = 4; ?>
 					<?php include 'compteur.php'; ?>
 					<a href="partenaire_cde.php"> Plus de détails </a>
 				</div>

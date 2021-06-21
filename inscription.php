@@ -3,7 +3,7 @@
 
 		<section>
 			<h1>Inscription</h1>
-			<form method="post" action="inscription_traitement.php">
+			<form method="post" action="test_inscription_traitement.php">
 				<p class="formulaire">
 					<label for="nom"> Nom </label>
 					<br />

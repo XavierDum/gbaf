@@ -3,12 +3,19 @@
 <?php $title = "Formation & Co"; ?>
 <?php include 'connexion_bdd.php'; ?>
 <?php include 'header.php'; ?>
-<?php $acteur = 3; ?>
+<?php $acteur = 2; ?>
 
 	<section>
 		<div class="partenaire_contenu">
 			<div class="partenaire_logo">
-				<img src="images/formation_co.png">
+				<?
+					$img = $bdd->prepare(" SELECT logo FROM acteur WHERE id_acteur= ? ");
+					$img->execute(array
+						($acteur
+					));
+					$logo = $img->fetch();
+				?>
+				<?php echo '<img src= "' .  $logo['logo'] . '">' ; ?>
 			</div>
 			<div class="partenaire_texte">
 				Formation&co est une association française présente sur tout le territoire.

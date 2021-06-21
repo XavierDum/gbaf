@@ -14,6 +14,7 @@
 					<input type="submit" value="Valider" />
 				</p>
 			</form>
+			<a href = "user.php">annuler</a>
 	</section>	
 
 <?php include 'footer.php';  ?>
