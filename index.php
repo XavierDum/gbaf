@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+<?php include 'verification_session.php'; ?>
 <?php $title = "Index"; ?>
 <?php include 'header.php'; ?>
 
@@ -17,16 +18,22 @@
 			
 			<div class="contenu">
 				<div class="logo">
-					<img src="images/CDE.png">
+					<img src="images/formation_co.png">
 				</div>
 				<div class="texte">
-					La CDE (Chambre Des Entrepreneurs) accompagne les entreprises dans leurs démarches de formation. 
-					Son président est élu pour 3 ans par ses pairs, chefs d’entreprises et présidents des CDE.
+					Formation&co est une association française présente sur tout le territoire.
+					Nous proposons à des personnes issues de tout milieu de devenir entrepreneur grâce à un crédit et un accompagnement professionnel et personnalisé.
+					Notre proposition : 
+					un financement jusqu’à 30 000€ ;
+					un suivi personnalisé et gratuit ;
+					une lutte acharnée contre les freins sociétaux et les stéréotypes.
+
+					Le financement est possible, peu importe le métier : coiffeur, banquier, éleveur de chèvres… . Nous collaborons avec des personnes talentueuses et motivées.
+					Vous n’avez pas de diplômes ? Ce n’est pas un problème pour nous ! Nos financements s’adressent à tous.
 				</div>
 				<div class="boutons">
-					<?php
-						include 'compteur_formationco.php';
-					?>
+					<?php $acteur = 1; ?>
+					<?php include 'compteur.php'; ?>
 						<a href="partenaire_formationco.php"> Plus de détails </a>
 				</div>
 			</div>
@@ -41,7 +48,9 @@
 					Nous les accompagnons pour voir plus grand et plus loin et proposons des solutions de financement adaptées à chaque étape de la vie des entreprises
 				</div>
 				<div class="boutons">
-					interaction
+					<?php $acteur = 2; ?>
+					<?php include 'compteur.php'; ?>
+					<a href="partenaire_dsa.php"> Plus de détails </a>
 				</div>		
 			</div>		
 			<div class="contenu">
@@ -61,7 +70,9 @@
 					économique : nous apportons une contribution aux activités économiques.
 				</div>
 				<div class="boutons">
-					interaction
+					<?php $acteur = 3; ?>
+					<?php include 'compteur.php'; ?>
+					<a href="partenaire_protectpeople.php"> Plus de détails </a>
 				</div>
 			</div><div class="contenu">
 				<div class="logo">
@@ -79,7 +90,9 @@
 					Vous n’avez pas de diplômes ? Ce n’est pas un problème pour nous ! Nos financements s’adressent à tous.
 				</div>
 				<div class="boutons">
-					interaction
+					<?php $acteur = 4; ?>
+					<?php include 'compteur.php'; ?>
+					<a href="partenaire_cde.php"> Plus de détails </a>
 				</div>
 			</div>		
 		</section>	

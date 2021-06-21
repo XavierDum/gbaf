@@ -10,11 +10,12 @@
 		<header>
 		<?php if(isset($_SESSION['user'])) { ?>
 			<div class= "banniere">
-			<a href="connexion.php"><img src="images/logo.png"></a>
+			<a href="index.php"><img src="images/logo.png"></a>
 			<div>
 			<?php
-				echo $_SESSION['user']['prenom'] . '  ' . $_SESSION['user']['nom'];
+				echo'<a href= "user.php">' .  $_SESSION['user']['prenom'] . '  ' . $_SESSION['user']['nom'] . '</a>';
 			?>
+			<p><a href= deconnexion.php>se déconnecter</a></p>
 			</div>
 			</div>
 		<? } else { ?>

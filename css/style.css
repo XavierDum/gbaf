@@ -105,17 +105,14 @@ section
 
 .formulaire_vote
 {
-	height: 100px;
 	background-color: rgba(255, 255, 255, 0.925);
 	border: 2px solid silver;
 	border-radius: 10px;
 	margin: 10px 0 10px 0;	
 }
 
-.formulaire_commentaire
+.formulaire_com
 {
-	width: 800px;
-	height: 100px;
 	background-color: rgba(255, 255, 255, 0.925);
 	border: 2px solid silver;
 	border-radius: 10px;
@@ -124,7 +121,6 @@ section
 
 .affichage_commentaire
 {
-	height: 400px;
 	background-color: rgba(255, 255, 255, 0.925);
 	border: 2px solid silver;
 	border-radius: 10px;

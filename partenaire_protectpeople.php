@@ -3,7 +3,7 @@
 <?php $title = "Formation & Co"; ?>
 <?php include 'connexion_bdd.php'; ?>
 <?php include 'header.php'; ?>
-<?php $acteur = 1; ?>
+<?php $acteur = 3; ?>
 
 	<section>
 		<div class="partenaire_contenu">
@@ -27,9 +27,10 @@
 		</div>
 		<div class="formulaire_vote">
 		<?php
-			$req_vote = $bdd->prepare('SELECT id_user FROM vote WHERE id_user= ?');
+			$req_vote = $bdd->prepare('SELECT id_user FROM vote WHERE id_user= ? AND id_acteur= ?');
 			$req_vote->execute(array
-				($_SESSION['user']['id_user']
+				($_SESSION['user']['id_user'],
+				$acteur
 			));
 			$resultat_vote = $req_vote->fetch();
 
@@ -42,9 +43,11 @@
 		</div>
 		<div class="formulaire_com">
 		<?php
-			$req_com = $bdd->prepare('SELECT id_user FROM post WHERE id_user= ?');
+			$resultat_com['id_acteur'] = 0;
+			$req_com = $bdd->prepare('SELECT id_user, id_acteur FROM post WHERE id_user= ? AND id_acteur= ? ');
 			$req_com->execute(array
-				($_SESSION['user']['id_user']
+				($_SESSION['user']['id_user'],
+				$acteur
 			));
 			$resultat_com = $req_com->fetch();
 

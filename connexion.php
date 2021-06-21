@@ -20,7 +20,7 @@
 			Pas encore de compte? <a href="inscription.php"> Inscrivez-vous </a>
 		</p>
 		<p>
-			Mot de passe oublié? Créer un nouveau mot de passe 
+			Mot de passe oublié? <a href="modification_mdp_sessionoff.php">Créer un nouveau mot de passe</a> 
 		</p>
 		</div>
 	</section>

@@ -2,7 +2,7 @@
 <?php include 'header.php'; ?>
 
 	<section>
-		<h1>Utilisateur ajouté !</h1>
+		<h2>Vous devez vous connecter pour accéder au contenu.</h2>
 		<p><a href="connexion.php"> se connecter </a></p>
 	</section>
 	

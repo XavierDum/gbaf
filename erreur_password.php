@@ -1,4 +1,4 @@
-<?php $title = "Index"; ?>
+<?php $title = "Connexion"; ?>
 <?php include 'header.php'; ?>
 
 	<section>

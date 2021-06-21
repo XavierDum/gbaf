@@ -4,12 +4,12 @@
 	$pass_hache = password_hash($_POST['password'], PASSWORD_DEFAULT);
 	$req = $bdd->prepare('INSERT INTO utilisateur(nom, prenom, username, password, question, reponse) VALUES(?, ?, ?, ?, ?, ?)');
 	$req->execute(array(
-		$_POST['nom'],
-		$_POST['prenom'],
-		$_POST['username'],
+		htmlspecialchars($_POST['nom']),
+		htmlspecialchars($_POST['prenom']),
+		htmlspecialchars($_POST['username']),
 		$pass_hache,
-		$_POST['question'],
-		$_POST['reponse']
+		htmlspecialchars($_POST['question']),
+		htmlspecialchars($_POST['reponse'])
 	));
 
 	header('Location: confirmation_inscription.php');
