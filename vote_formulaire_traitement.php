@@ -11,21 +11,8 @@
 		$_POST['vote']
 	));
 	
-	if ($acteur == 1) {
-        header('Location: partenaire_formationco.php');
-    }
-
-    if ($acteur == 2) {
-        header('Location: partenaire_protectpeople.php');
-    }
-
-    if ($acteur == 3) {
-        header('Location: partenaire_dsa.php');
-    }
-
-    if ($acteur == 4) {
-        header('Location: partenaire_cde.php');
-    }
+    header('Location: partenaire.php?acteur=' . $_POST['acteur']);
+    
 ?>	
 
 

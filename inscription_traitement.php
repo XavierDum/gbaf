@@ -1,4 +1,5 @@
 <?php
+// vérification des données saisi par l'utilisateur
 	$nom = valid_donnees($_POST["nom"]);
 	$prenom = valid_donnees($_POST["prenom"]);
 	$username = valid_donnees($_POST["username"]);
@@ -11,23 +12,24 @@
 		$donnees = trim($donnees);
 		$donnees = stripslashes($donnees);
 		$donnees = htmlspecialchars($donnees);
+
 		return $donnees;
 	}
-
-	if($password == $password_check){
+// vérification que le mot de passe soit bien écrit
+//si oui insertion des données saisi dans la base de données
+	if ($password == $password_check) {
 		include 'connexion_bdd.php';
-		$pass_hache = password_hash($password, PASSWORD_DEFAULT);
 		$req = $bdd->prepare('INSERT INTO utilisateur(nom, prenom, username, password, question, reponse) VALUES(?, ?, ?, ?, ?, ?)');
 		$req->execute(array(
 			$nom,
 			$prenom,
 			$username,
-			$pass_hache,
+			password_hash($password, PASSWORD_DEFAULT),
 			$question,
 			$reponse
 		));
 		header('Location: confirmation_inscription.php');
-	}else{
+	} else {
 		header('Location: inscription.php'); 
 	}
 ?>

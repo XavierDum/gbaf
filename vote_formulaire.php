@@ -2,7 +2,7 @@
 	<p class="formulaire">
 		<input type="radio" name="vote" value= 1 id="oui" checked="checked" /> <label for="oui">j'aime</label>
 		<input type="radio" name="vote" value= 0 id="non" /> <label for="non">je n'aime pas</label>
-		<input id="acteur" name="acteur" type="hidden" value= <? echo $acteur ?>>
+		<input id="acteur" name="acteur" type="hidden" value= <? echo $donnees['id_acteur']; ?>>
 	</p>
 	<p class="formulaire">
 		<input type="submit" value="Valider" />

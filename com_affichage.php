@@ -1,5 +1,6 @@
 <?php
-	$reponse = $bdd->query("SELECT id_user, date_com, post FROM post WHERE id_acteur= '$acteur' ");
+    $id_a = $donnees['id_acteur'];
+	$reponse = $bdd->query("SELECT id_user, date_com, post FROM post WHERE id_acteur=$id_a ");
     while($donnees = $reponse->fetch())
     {
         $req = $bdd->prepare('SELECT username FROM utilisateur WHERE id_user= ?');

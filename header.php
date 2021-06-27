@@ -8,6 +8,7 @@
 
 	<body>
 		<header>
+<! header affiché lorsqu'une session est en cour -->
 		<?php if(isset($_SESSION['user'])) { ?>
 			<div class= "banniere">
 			<a href="index.php"><img src="images/logo.png"></a>
@@ -18,6 +19,8 @@
 			<p><a href= deconnexion.php>se déconnecter</a></p>
 			</div>
 			</div>
+			
+<! header affiché lorsqu'on est pas encore connecté -->
 		<? } else { ?>
 			<div>
 			<a href="connexion.php"><img src="images/logo.png"></a>

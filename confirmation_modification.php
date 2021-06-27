@@ -1,4 +1,4 @@
-<?php $title = "Index"; ?>
+<?php $title = "Modification"; ?>
 <?php include 'header.php'; ?>
 
 	<section>
